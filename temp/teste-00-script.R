@@ -26,6 +26,9 @@ qntd_por_dia <- acidentes_dados_abertos %>%
   group_by(dia_semana) %>% 
   summarise(contagem = n_distinct(num_acidente))
 
+qntd_por_bairro <- acidentes_parana %>% 
+  group_by(bairro_acidente) %>% 
+  summarise(contegem = n_distinct(num_acidente))
 
 qntd_por_ano <- acidentes_dados_abertos%>% 
   group_by(ano_acidente) %>% 

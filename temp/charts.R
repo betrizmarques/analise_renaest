@@ -12,3 +12,13 @@ tipo_acidente %>%
   geom_bar(stat = "identity")+
   coord_flip()
   
+
+por_estado %>% 
+  ggplot(aes(x = uf_acidente, y = contagem))+
+  geom_bar(stat = "identity")+
+  coord_flip()
+
+
+teste <- dados %>% 
+  group_by(num_acidente) %>% 
+  summarise(contagem = n_distinct(num_acidente))
