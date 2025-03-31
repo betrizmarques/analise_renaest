@@ -6,8 +6,10 @@
 ### bem como reconhecer os estados/regiões que necessitam de maior foco para
 ### reduzir os índices de vítimas no trânsito.
 
+### Por: A. Beatriz Marques, Graduanda de Estatística e Ciência de Dados - UFPR
+
 ###-------------------------------------------------------------
-### Script para pré-processamento e limpeza dos dados.
+### Script para preparação dos dados para a análise.
 
 #Pré-Processamento dos dados.
 
@@ -31,7 +33,7 @@ chv_lat_long <- processed_data %>%
   select(num_acidente, chv_localidade, latitude_acidente, longitude_acidente, end_acidente, 
          bairro_acidente, municipio, uf_acidente, cep_acidente, num_end_acidente, km_via_acidente)
 
-
+# Limpando a base principal.
 processed_data_clean <- processed_data %>% 
   select(-latitude_acidente, -longitude_acidente, -cep_acidente, -num_end_acidente, -km_via_acidente, -mes_ano_acidente,-codigo_ibge)
 
